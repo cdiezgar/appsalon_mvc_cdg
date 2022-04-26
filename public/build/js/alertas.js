@@ -1,0 +1,1 @@
+function eventListeners(){document.querySelectorAll(".alerta").forEach(e=>e.addEventListener("mouseover",desaparecerAlerta))}function desaparecerAlerta(e){e.target.classList.add("invisible"),setTimeout(()=>{e.target.remove()},1e3)}document.addEventListener("DOMContentLoaded",(function(){eventListeners()}));
