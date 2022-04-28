@@ -11,7 +11,7 @@ class APIController {
     public static function index() {
 
         $servicios = Servicio::all();
-        json_encode($servicios, JSON_UNESCAPED_UNICODE);
+        echo json_encode($servicios,JSON_UNESCAPED_UNICODE);
 
     }
 
