@@ -36,13 +36,13 @@ $router->get("/mensaje", [LoginController::class, "mensaje"]);
 //ARERA PRIVADA
 $router->get("/cita", [CitaController::class, "index"]);
 $router->get("/misCitas", [CitaController::class, "misCitas"]);
-$router->post("/cita/eliminar",[CitaController::class, "eliminar"]);
+$router->post("/cita/eliminar",[CitaController::class, "eliminarDesdeAdmin"]);
 $router->get("/admin", [AdminController::class, "index"]);
 
 //API de Citas
 $router->get("/api/servicios", [APIController::class,"index"]);
 $router->post("/api/citas", [APIController::class,"guardar"]);
-$router->post("/api/eliminar", [APIController::class,"eliminarDesdeAdmin"]);
+$router->post("/api/eliminar", [APIController::class,"eliminarDesdeCliente"]);
 
 //CRUD de servicios
 $router->get("/servicios", [ServicioController::class,"index"]);

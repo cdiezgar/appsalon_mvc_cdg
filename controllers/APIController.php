@@ -35,7 +35,7 @@ class APIController {
             $citaServicio->guardar();
         }
         
-        echo json_encode(["resultado" => $resultado]);
+        echo json_encode(["resultado" => $resultado],JSON_UNESCAPED_UNICODE);
 
     }
 
