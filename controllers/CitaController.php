@@ -38,7 +38,7 @@ class CitaController {
 
     }
 
-    public static function eliminar (Router $router) {
+    public static function eliminarDesdeAdmin (Router $router) {
         
         isAuth();
 
