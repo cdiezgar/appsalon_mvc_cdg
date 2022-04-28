@@ -36,7 +36,7 @@ $router->get("/mensaje", [LoginController::class, "mensaje"]);
 //ARERA PRIVADA
 $router->get("/cita", [CitaController::class, "index"]);
 $router->get("/misCitas", [CitaController::class, "misCitas"]);
-$router->post("/cita/eliminar",[CitaController::class, "eliminarDesdeAdmin"]);
+$router->post("/cita/eliminar",[AdminController::class, "eliminarDesdeAdmin"]);
 $router->get("/admin", [AdminController::class, "index"]);
 
 //API de Citas

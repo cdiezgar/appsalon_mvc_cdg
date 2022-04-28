@@ -38,39 +38,5 @@ class CitaController {
 
     }
 
-    public static function eliminarDesdeAdmin (Router $router) {
-        
-        isAuth();
-
-        $idUsuario = $_SESSION["id"];
-
-        $citas = Cita::all();
-
-        if ($_SERVER['REQUEST_METHOD'] ==="POST") {
-
-    
-            $id = $_POST["id"];
-            $id = filter_var($id, FILTER_VALIDATE_INT);
-        
-            if ($id) {
-                $eliminar = Cita::find($id);
-                $resultado = $eliminar->eliminar();
-
-                if ($resultado) {
-                    header("Location: /misCitas");
-                    $citas = CitaUsuario::consultarSQL(CitaUsuario::consultarCitas($idUsuario));
-                }
-            
-
-            }
-        }
-
-        $router->render("cita/misCitas" ,
-        [
-
-        ]);
-
-
-    }
 
 }
